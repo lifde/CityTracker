@@ -1,6 +1,16 @@
 var map, datasource, client;
 
+function getOrigin () {
+  return window.location.pathname;
+}
+
 function GetMap() {
+    document.getElementById('dashboardBtn').onclick = function() {
+      let origin = getOrigin();
+      let url = origin.replace('mapRoute', 'dashboard');
+      window.location.href = url;
+    };
+
     var map = new atlas.Map('myMap', {
         // Replace <Your Azure Maps Key> with your Azure Maps subscription key. https://aka.ms/am-primaryKey
         authOptions: {
