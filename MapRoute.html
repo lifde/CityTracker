@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/drawing/1/atlas-drawing.min.css" type="text/css" />
     <script src="https://atlas.microsoft.com/sdk/javascript/drawing/1/atlas-drawing.min.js"></script>
 
+    <!-- Add reference to the animation module. -->
+    <script src="azure-maps-animations.min.js"></script>
+
     <!-- Add styles -->
     <link rel="stylesheet" href="styles.css" type="text/css">
 
@@ -24,5 +27,11 @@
 <body onload="GetMap()">
     <button id="dashboardBtn">Dashboard</button>
     <div id="myMap"></div>
+    <div style="position:absolute;top:62px;left:15px;border-radius:5px;padding:5px;background-color:white;">
+        <input type="button" value="Play" onclick="animation.play()" title="Play" />
+        <input type="button" value="Pause" onclick="animation.pause()" title="Pause" />
+        <input type="button" value="Stop" onclick="animation.stop()" title="Stop" />
+        <input type="button" value="Reset" onclick="animation.reset()" title="Reset" />
+    </div>
 </body>
 </html>
